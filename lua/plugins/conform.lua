@@ -27,6 +27,7 @@ return {
         nix = { 'alejandra' },
         rust = { 'rustfmt' },
         typescript = { 'prettierd' },
+        swift = { 'xcbeautify' },
       },
     },
   },

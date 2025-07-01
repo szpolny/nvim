@@ -56,6 +56,18 @@ return {
         end,
       }
 
+      local swiftCapabilities = {
+        workspace = {
+          didChangeWatchedFiles = {
+            dynamicRegistration = true,
+          },
+        },
+      }
+
+      require('lspconfig').sourcekit.setup {
+        capabilities = require('blink.cmp').get_lsp_capabilities(swiftCapabilities),
+      }
+
       require('mason-tool-installer').setup {
         ensure_installed = {
           'rust_analyzer',
@@ -84,6 +96,7 @@ return {
       }
 
       vim.lsp.inlay_hint.enable()
+      vim.lsp.enable 'nixd'
     end,
   },
   {
