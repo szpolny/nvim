@@ -48,6 +48,7 @@ return {
           'lemminx',
           'eslint',
           'ts_ls',
+          'csharp_ls',
         },
         handler = function(server_name)
           require('lspconfig')[server_name].setup {
